@@ -12,16 +12,16 @@ wget https://is.gd/2rx8F2
 mv 2rx8F2 ngrok.yml
 mv ngrok.yml /root/.ngrok2/ngrok.yml
 mv ngrok /usr/local/bin/ngrok
-echo "ngrok start --all" > /usr/local/bin/negro
+echo "ngrok start --all" > /usr/local/bin/autongrok
 cd /usr/local/bin
-chmod +x negro
+chmod +x autongrok
 cd /root/Desktop
 sleep 2
 rm -rf ngrok-install
 sleep 2
 rm ngr0k
 echo
-echo -e "\033[00;31mNGROK\033[0m \033[09;36mPENETRED\033[0m com \033[05;32mSUCESSO\033[0m BORA METER A PIKA NO SISTEMA KARAIO!"
-echo -e "Utilize o comando \033[01;31mnegro\033[0m para ativar todo o processo do ngrok automaticamente!"
+echo -e "\033[00;31mNGROK\033[0m \033[09;36mINSTALADO\033[0m com \033[05;32mSUCESSO\033[0m!"
+echo -e "Utilize o comando \033[01;31mautongrok\033[0m para ativar todo o processo do ngrok automaticamente!"
 echo
 exit
