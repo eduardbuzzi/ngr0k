@@ -1,0 +1,94 @@
+mv ngr0k /root/
+cd /root/
+mkdir ngrok-install 
+cd /root/ngrok-install 
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+clear
+unzip ngrok-stable-linux-amd64.zip 
+clear
+chmod +x ngrok 
+rm ngrok-stable-linux-adm64.zip
+clear
+./ngrok authtoken 1WRprYDzMqHHWI3OTdv4kZsCZhM_6buq33vEfFfgQhbfUxSRE
+rm /root/.ngrok2/ngrok.yml
+wget https://is.gd/uogMcd
+clear
+cat uogMcd | shuf -n 1 > /root/ngrok.yml
+wget https://is.gd/2rx8F2
+clear
+cat 2rx8F2 >> /root/ngrok.yml
+cp /root/ngrok.yml /root/.ngrok2/ngrok.yml
+rm /root/ngrok.yml
+rm -rf /root/ngr0k
+mv ngrok /usr/local/bin/ngrok
+echo "ngrok start --all" > /usr/local/bin/autongrok
+cd /usr/local/bin
+chmod +x autongrok
+cd /root/
+rm -rf ngrok-install
+cd /root/Desktop
+rm ngr0kk
+cd /root/
+wget https://is.gd/aTg0Mw
+clear
+mv aTg0Mw ngrok-trocarKey
+mv ngrok-trocarKey /usr/local/bin/ngrok-trocarKey
+cd /usr/local/bin/
+chmod +x ngrok-trocarKey
+cd /root/
+wget https://is.gd/lDX6zi
+clear
+mv lDX6zi ngrok-desinstalar
+mv ngrok-desinstalar /usr/local/bin/ngrok-desinstalar
+cd /usr/local/bin/
+chmod +x ngrok-desinstalar
+cd /root/
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo -e "============ [ \033[05;32mINSTALAÇÃO FINALIZADA COM SUCESSO\033[0m ] ============="
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 4
+clear
+sleep 0.5
+echo -e "Utilize o comando \033[01;31mautongrok\033[0m para ativar automaticamente o ngrok!"
+sleep 0.5
+echo
+echo -e "Key atual não está funcionando? use \033[00;31mngrok-trocarKey\033[0m"
+sleep 0.5
+echo
+echo -e "Precisa desinstalar o ngrok? use \033[00;35mngrok-desinstalar\033[0m"
+sleep 1
+echo
+echo -e " desenvolvido por \033[00;36mEduardo Buzzi\033[0m - https://github.com/eduardbuzzi"
+sleep 2
+echo
+echo "Deseja inicializar o Apache junto ao ngrok? (s/n)"
+read RESPOSTA
+test "$RESPOSTA" == "s" && service apache2 start && autongrok
+test "$RESPOSTA" == "S" && service apache2 start && autongrok
+test "$RESPOSTA" = "n" && echo "Deseja inicializar o ngrok com configuração TCP/HTTP já configurado? (s/n)" 
+test "$RESPOSTA" = "N" && echo "Deseja inicializar o ngrok com configuração TCP/HTTP já configurado? (s/n)" 
+read RESPOSTA2 
+test "$RESPOSTA2" == "s" && autongrok 
+test "$RESPOSTA2" == "S" && autongrok  
+test "$RESPOSTA2" == "n" && echo && echo && echo "Okay! Ngrok não será aberto nesse momento, tenha um ótimo dia!" && sleep 2.5 && clear && exit
+test "$RESPOSTA2" == "N" && echo && echo && echo "Okay! Ngrok não será aberto nesse momento, tenha um ótimo dia!" && sleep 2.5 && clear && exit
+exit
