@@ -3,3 +3,4 @@ cat Nhm9UR | shuf -n 1 > /root/ngrok.yml
 wget https://is.gd/ZkkkBP
 cat ZkkkBP >> /root/ngrok.yml
 mv /root/ngrok.yml /root/.ngrok2/ngrok.yml
+rm Nhm9UR && rm ZkkkBP
