@@ -1,3 +1,3 @@
-cd ./ngr0k
+cd /root/ngr0k
 chmod +x ngrok-install
 ./ngrok-install
