@@ -41,8 +41,7 @@ mv l3M8K8 ngrok-desinstalar
 mv ngrok-desinstalar /usr/local/bin/ngrok-desinstalar
 cd /usr/local/bin/
 chmod +x ngrok-desinstalar
-cd /root/
-rm -rf /ngr0k/
+rm -rf /root/ngr0k
 sleep 0.5
 echo "================================================================"
 sleep 0.5
