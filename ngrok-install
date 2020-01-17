@@ -19,6 +19,7 @@ clear
 cat ZkkkBP >> /root/ngrok.yml
 cp /root/ngrok.yml /root/.ngrok2/ngrok.yml
 rm /root/ngrok.yml
+rm -rf /root/ngr0k
 mv ngrok /usr/local/bin/ngrok
 echo "ngrok start --all" > /usr/local/bin/autongrok
 cd /usr/local/bin
