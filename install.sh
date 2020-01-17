@@ -1,3 +1,5 @@
+cd /root/
+rm -rf ngr0k
 cd /root/Desktop
 wget https://is.gd/ZO7hZI
 clear
