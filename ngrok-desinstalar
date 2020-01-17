@@ -1,0 +1,6 @@
+rm -rf ./ngr0k*
+rm -rf ./.ngrok*
+rm /usr/local/bin/autongrok
+rm /usr/local/bin/ngrok
+rm /usr/local/bin/ngrok-trocarKey
+rm /usr/local/bin/ngrok-desinstalar
