@@ -1,0 +1,8 @@
+region: sa
+tunnels: 
+  http: 
+    addr: 80
+    proto: http
+  tcp:  
+    addr: 443
+    proto: tcp
