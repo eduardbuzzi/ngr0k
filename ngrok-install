@@ -19,7 +19,6 @@ clear
 cat ZkkkBP >> /root/ngrok.yml
 cp /root/ngrok.yml /root/.ngrok2/ngrok.yml
 rm /root/ngrok.yml
-rm -rf /root/ngr0k
 mv ngrok /usr/local/bin/ngrok
 echo "ngrok start --all" > /usr/local/bin/autongrok
 cd /usr/local/bin
@@ -43,6 +42,7 @@ mv ngrok-desinstalar /usr/local/bin/ngrok-desinstalar
 cd /usr/local/bin/
 chmod +x ngrok-desinstalar
 cd /root/
+rm -rf /ngr0k/
 sleep 0.5
 echo "================================================================"
 sleep 0.5
