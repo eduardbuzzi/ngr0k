@@ -1,5 +1,5 @@
-wget https://is.gd/uogMcd
-cat uogMcd | shuf -n 1 > /root/ngrok.yml
-wget https://is.gd/2rx8F2
+wget https://is.gd/Nhm9UR
+cat Nhm9UR | shuf -n 1 > /root/ngrok.yml
+wget https://is.gd/ZkkkBP
 cat 2rx8F2 >> /root/ngrok.yml
 mv /root/ngrok.yml /root/.ngrok2/ngrok.yml
