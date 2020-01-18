@@ -1,5 +1,3 @@
-cd /root/ngr0k
-rm *
 cd /root/Desktop
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-install
 clear
