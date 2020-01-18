@@ -1,4 +1,3 @@
-mv ngr0k /root/
 cd /root/
 mkdir ngrok-install 
 cd /root/ngrok-install 
