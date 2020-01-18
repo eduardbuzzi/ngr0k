@@ -1,6 +1,5 @@
 mv ngr0k /root/
 cd /root/
-rm -rf ngr0k
 mkdir ngrok-install 
 cd /root/ngrok-install 
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
@@ -40,6 +39,7 @@ clear
 mv ngrok-desinstalar /usr/local/bin/ngrok-desinstalar
 cd /usr/local/bin/
 chmod +x ngrok-desinstalar
+rm -rf ngr0k
 sleep 0.5
 echo "================================================================"
 sleep 0.5
