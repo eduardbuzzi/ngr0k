@@ -5,3 +5,6 @@ clear
 cat tunnel >> /root/ngrok.yml
 mv /root/ngrok.yml /root/.ngrok2/ngrok.yml
 rm ngrok-accounts && rm tunnel
+echo "Key alterada, verifique em: /root/.ngrok2/ngrok.yml"
+echo
+exit
