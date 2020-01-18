@@ -1,6 +1,28 @@
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-accounts
 cat ngrok-accounts | shuf -n 1 > /root/ngrok.yml
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/tunnel
+clear
 cat tunnel >> /root/ngrok.yml
 mv /root/ngrok.yml /root/.ngrok2/ngrok.yml
 rm ngrok-accounts && rm tunnel
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo -e "========== [ \033[05;32mDESINSTALAÇÃO FINALIZADA COM SUCESSO\033[0m ] ==========="
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
+sleep 0.5
+echo "================================================================"
