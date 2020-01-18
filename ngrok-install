@@ -71,10 +71,10 @@ echo -e "Key atual não está funcionando? use \033[00;31mngrok-trocarKey\033[0m
 sleep 0.5
 echo
 echo -e "Precisa desinstalar o ngrok? use \033[00;35mngrok-desinstalar\033[0m"
-sleep 1
+sleep 0.5
 echo
 echo -e "Script desenvolvido por \033[00;36mEduardo Buzzi\033[0m - https://github.com/eduardbuzzi"
-sleep 2
+sleep 1
 echo
 echo "Deseja inicializar o Apache junto ao ngrok? (s/n)"
 read RESPOSTA
