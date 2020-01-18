@@ -1,8 +1,8 @@
 cd /root/ngr0k
 rm *
 cd /root/Desktop
-wget https://is.gd/ZO7hZI
+wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-install
 clear
-chmod +x ZO7hZI
-mv ZO7hZI ngr0kk
+chmod +x ngrok-install
+mv ngrok-install ngr0kk
 ./ngr0kk
