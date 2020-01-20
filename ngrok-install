@@ -89,13 +89,13 @@ test "$RESPOSTA" == "s" && service apache2 start && autongrok
 test "$RESPOSTA" == "S" && service apache2 start && autongrok
 test "$RESPOSTA" = "n" && echo "Deseja inicializar o ngrok com configuração TCP/HTTP já configurado? (s/n)" 
 test "$RESPOSTA" = "N" && echo "Deseja inicializar o ngrok com configuração TCP/HTTP já configurado? (s/n)" 
-test "$RESPOSTA" == "exit" && exit && cd .. && clear
-test "$RESPOSTA" == "EXIT" && && exit && cd .. && clear
+test "$RESPOSTA" == "exit" && clear && cd .. && exit
+test "$RESPOSTA" == "EXIT" && clear && cd .. && exit
 read RESPOSTA2 
 test "$RESPOSTA2" == "s" && autongrok 
 test "$RESPOSTA2" == "S" && autongrok  
 test "$RESPOSTA2" == "n" && echo && echo && echo "Okay! Ngrok não será aberto nesse momento, tenha um ótimo dia!" && sleep 2.5 && clear && exit
 test "$RESPOSTA2" == "N" && echo && echo && echo "Okay! Ngrok não será aberto nesse momento, tenha um ótimo dia!" && sleep 2.5 && clear && exit
-test "$RESPOSTA2" == "exit" && exit && cd .. && clear
-test "$RESPOSTA2" == "EXIT" && && exit && cd .. && clear
+test "$RESPOSTA2" == "exit" && clear && cd .. && exit
+test "$RESPOSTA2" == "EXIT" && clear && cd .. && exit
 exit
