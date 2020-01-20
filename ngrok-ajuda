@@ -1,36 +1,35 @@
 NOME:
-   ngrok - encapsula portas locais para URLs públicas e inspeciona o tráfego
+ngrok - encapsula portas locais para URLs públicas e inspeciona o tráfego
 
 DESCRIÇÃO:
-
-    O ngrok expõe serviços de rede locais por trás de NATs e firewalls para a
-    Internet pública através de um túnel seguro. Compartilhe sites locais,
-    construa / teste consumidores da webhook e serviços pessoais de auto-host.
-    Ajuda detalhada para cada comando está disponível com 'ngrok help <comando>'.
-    Abra http://localhost:4040 para a interface da web do ngrok para inspecionar o tráfego.
+O ngrok expõe serviços de rede locais por trás de NATs e firewalls para a
+Internet pública através de um túnel seguro. Compartilhe sites locais,
+construa / teste consumidores da webhook e serviços pessoais de auto-host.
+Ajuda detalhada para cada comando está disponível com 'ngrok help <comando>'.
+Abra http://localhost:4040 para a interface da web do ngrok para inspecionar o tráfego.
 
 EXEMPLOS:
-    ngrok http 80                    # URL público seguro para o servidor da web da porta 80
-    ngrok http -subdomain=baz 8080   # porta 8080 disponível em baz.ngrok.io
-    ngrok http foo.dev:80            # encapsulamento para hospedar: porta em vez de localhost
-    ngrok http https://localhost     # expor um servidor https local
-    ngrok tcp 22                     # encapsular tráfego TCP arbitrário para a porta 22
-    ngrok tls -hostname=foo.com 443  # Tráfego TLS para foo.com na porta 443
-    ngrok start foo bar baz          # iniciar túneis a partir do arquivo de configuração
+ngrok http 80                    # URL público seguro para o servidor da web da porta 80
+ngrok http -subdomain=baz 8080   # porta 8080 disponível em baz.ngrok.io
+ngrok http foo.dev:80            # encapsulamento para hospedar: porta em vez de localhost
+ngrok http https://localhost     # expor um servidor https local
+ngrok tcp 22                     # encapsular tráfego TCP arbitrário para a porta 22
+ngrok tls -hostname=foo.com 443  # Tráfego TLS para foo.com na porta 443
+ngrok start foo bar baz          # iniciar túneis a partir do arquivo de configuração
 
 VERSÃO:
-   2.3.35
+2.3.35
 
 AUTOR:
-  inconshreveable - <alan@ngrok.com>
+inconshreveable - <alan@ngrok.com>
 
-COMMANDS:
-   authtoken    salvar authtoken no arquivo de configuração
-   credits      imprime informações de autor e licenciamento
-   http         iniciar um túnel HTTP
-   start        iniciar túneis por nome a partir do arquivo de configuração
-   tcp          iniciar um túnel TCP
-   tls          iniciar um túnel TLS
-   update       atualize o ngrok para a versão mais recente
-   version      imprima a string da versão
-   help         Mostra uma lista de comandos ou ajuda para um comando em Inglês
+COMMANDOS:
+authtoken - salvar authtoken no arquivo de configuração
+credits - imprime informações de autor e licenciamento
+http - iniciar um túnel HTTP
+start - iniciar túneis por nome a partir do arquivo de configuração
+tcp - iniciar um túnel TCP
+tls - iniciar um túnel TLS
+update - atualize o ngrok para a versão mais recente
+version - imprima a string da versão
+help - Mostra uma lista de comandos ou ajuda para um comando em Inglês
