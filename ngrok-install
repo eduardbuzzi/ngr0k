@@ -68,7 +68,7 @@ sleep 0.5
 echo "================================================================"
 sleep 0.5
 echo "================================================================"
-sleep 4
+sleep 1.5
 clear
 sleep 0.5
 echo -e "Utilize o comando \033[01;31mautongrok\033[0m para ativar automaticamente o ngrok!"
