@@ -39,6 +39,12 @@ mv ngrok-trocarKey /usr/local/bin/ngrok-trocarKey
 cd /usr/local/bin/
 chmod +x ngrok-trocarKey
 cd /root/
+wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-ajuda
+clear
+mv ngrok-ajuda /usr/local/bin/ngrok-ajuda
+cd /usr/local/bin/
+chmod +x ngrok-ajuda
+cd /root/
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-desinstalar
 clear
 mv ngrok-desinstalar /usr/local/bin/ngrok-desinstalar
@@ -76,8 +82,9 @@ sleep 0.5
 echo
 echo -e "Key atual não está funcionando? use \033[00;31mngrok-trocarKey\033[0m"
 sleep 0.5
-echo
 echo -e "Precisa desinstalar o ngrok? use \033[00;35mngrok-desinstalar\033[0m"
+sleep 0.5
+echo -e "Precisa de ajuda para usar o ngrok? use \033[01;00mngrok-ajuda\033[0m"
 sleep 0.5
 echo
 echo -e "Script desenvolvido por \033[00;36mEduardo Buzzi\033[0m - https://github.com/eduardbuzzi"
