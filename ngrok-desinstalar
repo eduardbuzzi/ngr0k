@@ -4,6 +4,7 @@ rm /usr/local/bin/autongrok
 rm /usr/local/bin/ngrok
 rm /usr/local/bin/ngrok-trocarKey
 rm /usr/local/bin/ngrok-desinstalar
+rm /usr/local/bin/ngrok-ajuda
 sleep 0.5
 echo "================================================================"
 sleep 0.5
