@@ -40,7 +40,6 @@ cd /usr/local/bin/
 chmod +x ngrok-trocarKey
 cd /root/
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-ajuda
-cat ngrok-ajuda > /root/ngrok-ajuda
 mv ngrok-ajuda /usr/local/bin/ngrok-ajuda
 cd /usr/local/bin/
 chmod +x ngrok-ajuda
