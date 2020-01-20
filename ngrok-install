@@ -8,8 +8,14 @@ clear
 chmod +x ngrok 
 rm ngrok-stable-linux-adm64.zip
 clear
-./ngrok authtoken 1WRprYDzMqHHWI3OTdv4kZsCZhM_6buq33vEfFfgQhbfUxSRE
+wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-accounts
+clear
+KEY=$(cat /root/ngrok-install/ngrok-accounts | cut -f2 -d' ' | shuf -n1)
+./ngrok authtoken "$KEY"
+rm /root/ngrok-install/ngrok-accounts
+clear
 rm /root/.ngrok2/ngrok.yml
+clear
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-accounts
 clear
 cat ngrok-accounts | shuf -n 1 > /root/ngrok.yml
