@@ -35,5 +35,4 @@ echo
 sleep 0.5
 echo "tchauzinho! :]"
 sleep 1
-cd ..
 clear
