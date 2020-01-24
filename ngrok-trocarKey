@@ -1,10 +1,11 @@
+cd /root/
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/ngrok-accounts
 cat ngrok-accounts | shuf -n 1 > /root/ngrok.yml
 wget https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/tunnel
 clear
 cat tunnel >> /root/ngrok.yml
 mv /root/ngrok.yml /root/.ngrok2/ngrok.yml
-rm ngrok-accounts && rm tunnel
 echo "Key alterada, verifique em: /root/.ngrok2/ngrok.yml"
+rm ngrok-accounts && rm tunnel
 echo
 exit
