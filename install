@@ -198,9 +198,9 @@ echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ng
 sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
+echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
@@ -375,9 +375,9 @@ echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ng
 sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
+echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
@@ -568,9 +568,9 @@ echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ng
 sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
+echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
@@ -745,9 +745,9 @@ echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ng
 sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
+echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
