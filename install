@@ -362,7 +362,6 @@ echo $linha
 echo
 fi
 
-sleep 0.5
 echo $linha
 sleep 0.5
 echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
@@ -370,12 +369,11 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
 sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
+echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
+echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
@@ -555,7 +553,6 @@ echo $linha
 echo
 fi
 
-sleep 0.5
 echo $linha
 sleep 0.5
 echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
@@ -563,12 +560,11 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
 sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
+echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
+echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
@@ -732,7 +728,6 @@ echo $linha
 echo
 fi
 
-sleep 0.5
 echo $linha
 sleep 0.5
 echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
@@ -740,12 +735,11 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
 sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-sleep 0.5
 echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: '\033[01;34mEduardo Buzzi\033[01;00m'"
+echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
 sleep 0.5
-echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
+echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
 sleep 0.5
 echo $linha
 sleep 2
