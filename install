@@ -197,15 +197,12 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
 sleep 0.5
 echo $linha
-echo
-echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: \034[01;31mEduardo Buzzi\034[01;00m"
+echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: \034[01;31mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
 sleep 0.5
 echo $linha
-echo
 sleep 2
 echo "Ngrok vai ser executado automaticamente em: 5"
 sleep 1
@@ -366,6 +363,7 @@ echo "NGROK INSTALADO, tenha uma BOA NOITE!"
 echo $linha
 echo
 fi
+
 sleep 0.5
 echo $linha
 sleep 0.5
@@ -376,15 +374,12 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
 sleep 0.5
 echo $linha
-echo
-echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: \034[01;31mEduardo Buzzi\034[01;00m"
+echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: \034[01;31mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
 sleep 0.5
 echo $linha
-echo
 sleep 2
 echo "Ngrok vai ser executado automaticamente em: 5"
 sleep 1
@@ -406,6 +401,7 @@ exit
 
 clear
 echo
+echo -e "CARA, tens que escolher entre \033[01;31m1 e 2\033[01;00m, se digitar novamente errado o instalador vai ser fechado!"
 echo $linha
 echo -e "Para evitar problemas entre como \033[01;31mroot\033[01;00m para instalar!"
 echo $linha
@@ -571,15 +567,12 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
 sleep 0.5
 echo $linha
-echo
-echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: \034[01;31mEduardo Buzzi\034[01;00m"
+echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: \034[01;31mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
 sleep 0.5
 echo $linha
-echo
 sleep 2
 echo "Ngrok vai ser executado automaticamente em: 5"
 sleep 1
@@ -751,15 +744,12 @@ sleep 0.5
 echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
 sleep 0.5
 echo $linha
-echo
-echo $linha
 sleep 0.5
-echo -e "Script desenvolvido por: \034[01;31mEduardo Buzzi\034[01;00m"
+echo -e "Script desenvolvido por: '\033[04;31mEduardo Buzzi\034[01;00m'"
 sleep 0.5
-echo -e "Mais Scripts em: \034[01;31mhttps://github.com/eduardbuzzi\034[01;00m"
+echo -e "Mais Scripts em: '\033[01;34mhttps://github.com/eduardbuzzi\034[01;00m"
 sleep 0.5
 echo $linha
-echo
 sleep 2
 echo "Ngrok vai ser executado automaticamente em: 5"
 sleep 1
@@ -777,5 +767,10 @@ xterm -hold -e 'autongrok'
 exit
 ;;
 
+*)
+clear
+echo "Eu avisei que o Instalador seria fechado se errase, era apenas escolher entre 1 e 2! =C"
+exit
+;;
 esac
 esac
