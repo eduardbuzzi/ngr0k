@@ -201,7 +201,7 @@ sleep 0.5
 echo "Ngrok vai ser executado automaticamente em: 1"
 sleep 0.5
 
-xterm -hold -e 'autongrok'
+xterm -hold -e 'autongrok' &
 
 exit
 ;;
@@ -364,7 +364,7 @@ sleep 0.5
 echo "Ngrok vai ser executado automaticamente em: 1"
 sleep 0.5
 
-xterm -hold -e 'autongrok'
+xterm -hold -e 'autongrok' &
 
 exit
 ;;
@@ -543,7 +543,7 @@ sleep 0.5
 echo "Ngrok vai ser executado automaticamente em: 1"
 sleep 0.5
 
-xterm -hold -e 'autongrok'
+xterm -hold -e 'autongrok' &
 
 exit
 ;;
@@ -708,7 +708,7 @@ sleep 0.5
 echo "Ngrok vai ser executado automaticamente em: 1"
 sleep 0.5
 
-xterm -hold -e 'autongrok'
+xterm -hold -e 'autongrok' &
 
 exit
 ;;
