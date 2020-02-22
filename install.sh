@@ -44,6 +44,7 @@ echo
 read -s escolhaBits
 case $escolhaBits in
 1)
+touch ngrok-stable-linux-386.zip
 rm ngrok-stable-linux-386.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
 unzip -qq ngrok-stable-linux-386.zip
@@ -206,9 +207,10 @@ exit
 ;;
 
 2)
+touch ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-unzip -q ngrok-stable-linux-amd64.zip
+unzip -qq ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip
 mv ngrok $path/ngrok
 
@@ -384,6 +386,7 @@ read -s escolhaBits
 case $escolhaBits in
 
 1)
+touch ngrok-stable-linux-386.zip
 rm ngrok-stable-linux-386.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
 unzip -qq ngrok-stable-linux-386.zip
@@ -546,6 +549,7 @@ exit
 ;;
 
 2)
+touch ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip -qq ngrok-stable-linux-amd64.zip
