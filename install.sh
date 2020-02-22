@@ -208,7 +208,7 @@ exit
 2)
 rm ngrok-stable-linux-amd64.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-unzip -qq ngrok-stable-linux-amd64.zip
+unzip -q ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip
 mv ngrok $path/ngrok
 
