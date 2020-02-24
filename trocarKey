@@ -1,6 +1,6 @@
 region: sa
 tunnels:
-  http:"
+  http:
     addr: 80
     proto: http
   tcp:
