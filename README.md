@@ -1,6 +1,6 @@
-# Instalação do ngr0k
+# Instalação do ngrok
 
-### git clone https://github.com/eduardbuzzi/ngr0k
+### git clone https://github.com/eduardbuzzi/ngrok
 
 ### cd ngr0k
 
