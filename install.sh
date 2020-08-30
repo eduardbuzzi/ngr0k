@@ -1,3 +1,129 @@
+#!/bin/bash
+
+send_keys(){
+echo $KEY1 > $PWD/keys
+echo $KEY2 >> $PWD/keys
+echo $KEY3 >> $PWD/keys
+echo $KEY4 >> $PWD/keys
+echo $KEY5 >> $PWD/keys
+echo $KEY6 >> $PWD/keys
+echo $KEY7 >> $PWD/keys
+echo $KEY8 >> $PWD/keys
+echo $KEY9 >> $PWD/keys
+echo $KEY10 >> $PWD/keys
+echo $KEY11 >> $PWD/keys
+echo $KEY12 >> $PWD/keys
+echo $KEY13 >> $PWD/keys
+echo $KEY14 >> $PWD/keys
+echo $KEY15 >> $PWD/keys
+echo $KEY16 >> $PWD/keys
+echo $KEY17 >> $PWD/keys
+echo $KEY18 >> $PWD/keys
+echo $KEY19 >> $PWD/keys
+echo $KEY20 >> $PWD/keys
+echo $KEY21 >> $PWD/keys
+echo $KEY22 >> $PWD/keys
+echo $KEY23 >> $PWD/keys
+echo $KEY24 >> $PWD/keys
+echo $KEY25 >> $PWD/keys
+echo $KEY26 >> $PWD/keys
+echo $KEY27 >> $PWD/keys
+}
+
+config_default(){
+authtoken=$(echo "authtoken: $KEY" > /root/.ngrok2/ngrok.yml)
+region=$(echo "region: sa" >> /root/.ngrok2/ngrok.yml)
+tunnels=$(echo "tunnels:" >> /root/.ngrok2/ngrok.yml)
+http=$(echo "  http:" >> /root/.ngrok2/ngrok.yml)
+addr80=$(echo "    addr: 80" >> /root/.ngrok2/ngrok.yml)
+protoHttp=$(echo "    proto: http" >> /root/.ngrok2/ngrok.yml)
+tcp=$(echo "  tcp:" >> /root/.ngrok2/ngrok.yml)
+addr443=$(echo "    addr: 443" >> /root/.ngrok2/ngrok.yml)
+protoTcp=$(echo "    proto: tcp" >> /root/.ngrok2/ngrok.yml)
+
+$authtoken
+$region
+$tunnels
+$http
+$addr80
+$protoHttp
+$tcp
+$addr443
+$protoTcp
+}
+
+request_autongrok_trocarkey_desinstalar(){
+echo "ngrok start --all" >> autongrok
+chmod +x autongrok
+mv autongrok /usr/local/bin/autongrok
+
+touch trocarKey
+chmod +x trocarKey
+mv trocarKey /usr/local/bin/trocarKey
+
+echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/trocarKey" > $path/trocarKey
+echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/keys" >> $path/trocarKey
+echo "cat keys | shuf -n1 > /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 1 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 2 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 3 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 4 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 5 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 6 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 7 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "head -n 8 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
+echo "rm keys" >> $path/trocarKey
+echo "rm trocarKey" >> $path/trocarKey
+
+rm keys
+
+touch ngrok-desinstalar
+chmod +x ngrok-desinstalar
+mv ngrok-desinstalar $path/ngrok-desinstalar
+
+rmNgrok2=$(echo "rm -rf ./.ngrok*")
+rmAutongrok=$(echo "rm $path/autongrok")
+rmNgrok=$(echo "rm $path/ngrok")
+rmTrocarKey=$(echo "rm $path/trocarKey")
+rmNgrokDesinstalar=$(echo "rm $path/ngrok-desinstalar")
+
+echo $rmNgrok2 > $path/ngrok-desinstalar
+echo $rmAutongrok >> $path/ngrok-desinstalar
+echo $rmNgrok >> $path/ngrok-desinstalar
+echo $rmTrocarKey >> $path/ngrok-desinstalar
+echo $rmNgrokDesinstalar >> $path/ngrok-desinstalar
+}
+
+ngrok_instalado(){
+if [ $hora -ge '00' ] && [ $hora -le '11' ]
+then
+echo "NGROK INSTALLED, have a GOOD MORNING!"
+fi
+
+if [ $hora -ge '12' ] && [ $hora -le '17' ]
+then
+echo "NGROK INSTALLED, have a GOOD AFTERNOON!"
+fi
+
+if [ $hora -ge '18' ] && [ $hora -le '23' ]
+then
+echo "NGROK INSTALLED, have a GOOD NIGHT!"
+fi
+}
+
+how_use_and_credits(){
+echo
+echo $line
+echo -e "Use '\033[01;31mautongrok\033[01;00m' in the Terminal to open the configured Ngrok."
+echo -e "Use '\033[01;31mtrocarKey\033[01;00m' to change the Key if you have a problem."
+echo -e "Use '\033[01;31mngrok-desinstalar\033[01;00m' to uninstall ngrok."
+echo $line
+echo
+echo -e "Script developed by: \033[01;34mEduardo Buzzi\033[01;00m"
+echo -e "More Scripts in: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
+echo
+}
+
 path=$(echo $PATH | cut -d ':' -f2)
 hora=$(date +%H)
 
@@ -29,21 +155,29 @@ KEY25=1WRpv0lvSV4zOCUIeQy596nJNS4_rCoHW9B839eAR1GC7KM4
 KEY26=1WRpzt3WdW42qrEqzJaZiy6PnIa_2QG1TYfmYAjPh3ExY97Qw
 KEY27=1WRq36Lctbq9ZIrj6LOCaB7DFrR_3JMDXVxH23CmhrQoG8g2k
 
-linha=$(echo -e "\033[01;36m-=-=-=-=-=-=-=-=-=-=\033[01;00m")
+line=$(echo -e "\033[01;36m-=-=-=-=-=-=-=-=-=-=\033[01;00m")
 
-clear
+principal(){
+ROT=$(id -u)
+if [ $ROT -ne 0 ]
+then
 echo
-echo $linha
-echo -e "Para evitar problemas entre como \033[01;31mroot\033[01;00m para instalar!"
-echo $linha
-echo "Deseja instalar o ngrok para qual versao do Linux?"
+echo "Hello $USER, unfortunately you are not root."
+echo "Please log in as root to access the tool."
+echo
+exit
+fi
+echo
+echo "Which version of Linux do you want to install ngrok for?"
 echo "  (1) x86"
 echo "  (2) x64"
-echo $linha
 echo
-read -s escolhaBits
+read -p " => " escolhaBits
 case $escolhaBits in
 1)
+echo
+echo "Wait, installing ngrok ..."
+echo
 touch ngrok-stable-linux-386.zip
 rm ngrok-stable-linux-386.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
@@ -51,162 +185,25 @@ unzip -qq ngrok-stable-linux-386.zip
 rm ngrok-stable-linux-386.zip
 mv ngrok $path/ngrok
 
-echo $KEY1 > $PWD/keys
-echo $KEY2 >> $PWD/keys
-echo $KEY3 >> $PWD/keys
-echo $KEY4 >> $PWD/keys
-echo $KEY5 >> $PWD/keys
-echo $KEY6 >> $PWD/keys
-echo $KEY7 >> $PWD/keys
-echo $KEY8 >> $PWD/keys
-echo $KEY9 >> $PWD/keys
-echo $KEY10 >> $PWD/keys
-echo $KEY11 >> $PWD/keys
-echo $KEY12 >> $PWD/keys
-echo $KEY13 >> $PWD/keys
-echo $KEY14 >> $PWD/keys
-echo $KEY15 >> $PWD/keys
-echo $KEY16 >> $PWD/keys
-echo $KEY17 >> $PWD/keys
-echo $KEY18 >> $PWD/keys
-echo $KEY19 >> $PWD/keys
-echo $KEY20 >> $PWD/keys
-echo $KEY21 >> $PWD/keys
-echo $KEY22 >> $PWD/keys
-echo $KEY23 >> $PWD/keys
-echo $KEY24 >> $PWD/keys
-echo $KEY25 >> $PWD/keys
-echo $KEY26 >> $PWD/keys
-echo $KEY27 >> $PWD/keys
+send_keys
 
 KEY=$(cat $PWD/keys | shuf -n1)
 
-ngrok authtoken "$KEY"
+ngrok authtoken "$KEY" > /dev/null 2>&1
 
 rm /root/.ngrok2/ngrok.yml
 
-authtoken=$(echo "authtoken: $KEY" > /root/.ngrok2/ngrok.yml)
-region=$(echo "region: sa" >> /root/.ngrok2/ngrok.yml)
-tunnels=$(echo "tunnels:" >> /root/.ngrok2/ngrok.yml)
-http=$(echo "  http:" >> /root/.ngrok2/ngrok.yml)
-addr80=$(echo "    addr: 80" >> /root/.ngrok2/ngrok.yml)
-protoHttp=$(echo "    proto: http" >> /root/.ngrok2/ngrok.yml)
-tcp=$(echo "  tcp:" >> /root/.ngrok2/ngrok.yml)
-addr443=$(echo "    addr: 443" >> /root/.ngrok2/ngrok.yml)
-protoTcp=$(echo "    proto: tcp" >> /root/.ngrok2/ngrok.yml)
-
-$authtoken
-$region
-$tunnels
-$http
-$addr80
-$protoHttp
-$tcp
-$addr443
-$protoTcp
-
-echo "ngrok start --all" >> autongrok
-chmod +x autongrok
-mv autongrok /usr/local/bin/autongrok
-
-touch trocarKey
-chmod +x trocarKey
-mv trocarKey /usr/local/bin/trocarKey
-
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/trocarKey" > $path/trocarKey
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/keys" >> $path/trocarKey
-echo "cat keys | shuf -n1 > /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 1 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 2 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 3 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 4 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 5 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 6 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 7 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 8 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "rm keys" >> $path/trocarKey
-echo "rm trocarKey" >> $path/trocarKey
-
-rm keys
-
-touch ngrok-desinstalar
-chmod +x ngrok-desinstalar
-mv ngrok-desinstalar $path/ngrok-desinstalar
-
-rmNgrok2=$(echo "rm -rf ./.ngrok*")
-rmAutongrok=$(echo "rm $path/autongrok")
-rmNgrok=$(echo "rm $path/ngrok")
-rmTrocarKey=$(echo "rm $path/trocarKey")
-rmNgrokDesinstalar=$(echo "rm $path/ngrok-desinstalar")
-
-echo $rmNgrok2 > $path/ngrok-desinstalar
-echo $rmAutongrok >> $path/ngrok-desinstalar
-echo $rmNgrok >> $path/ngrok-desinstalar
-echo $rmTrocarKey >> $path/ngrok-desinstalar
-echo $rmNgrokDesinstalar >> $path/ngrok-desinstalar
-
-if [ $hora -ge '00' ] && [ $hora -le '05' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA MADRUGADA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '06' ] && [ $hora -le '11' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha um BOM DIA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '12' ] && [ $hora -le '17' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA TARDE!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '18' ] && [ $hora -le '23' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA NOITE!"
-echo $linha
-echo
-fi
-
-echo $linha
-echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
-echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
-echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-echo $linha
-echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
-echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
-echo $linha
-sleep 1
-echo "Ngrok vai ser executado automaticamente em: 5"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 4"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 3"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 2"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 1"
-sleep 0.5
-
-xterm -hold -e 'autongrok' &
-
+config_default
+request_autongrok_trocarkey_desinstalar
+ngrok_instalado
+how_use_and_credits
 exit
 ;;
 
 2)
+echo
+echo "Wait, installing ngrok ..."
+echo
 touch ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
@@ -214,509 +211,24 @@ unzip -qq ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip
 mv ngrok $path/ngrok
 
-echo $KEY1 > $PWD/keys
-echo $KEY2 >> $PWD/keys
-echo $KEY3 >> $PWD/keys
-echo $KEY4 >> $PWD/keys
-echo $KEY5 >> $PWD/keys
-echo $KEY6 >> $PWD/keys
-echo $KEY7 >> $PWD/keys
-echo $KEY8 >> $PWD/keys
-echo $KEY9 >> $PWD/keys
-echo $KEY10 >> $PWD/keys
-echo $KEY11 >> $PWD/keys
-echo $KEY12 >> $PWD/keys
-echo $KEY13 >> $PWD/keys
-echo $KEY14 >> $PWD/keys
-echo $KEY15 >> $PWD/keys
-echo $KEY16 >> $PWD/keys
-echo $KEY17 >> $PWD/keys
-echo $KEY18 >> $PWD/keys
-echo $KEY19 >> $PWD/keys
-echo $KEY20 >> $PWD/keys
-echo $KEY21 >> $PWD/keys
-echo $KEY22 >> $PWD/keys
-echo $KEY23 >> $PWD/keys
-echo $KEY24 >> $PWD/keys
-echo $KEY25 >> $PWD/keys
-echo $KEY26 >> $PWD/keys
-echo $KEY27 >> $PWD/keys
+send_keys
 
 KEY=$(cat $PWD/keys | shuf -n1)
 
-ngrok authtoken "$KEY"
+ngrok authtoken "$KEY" > /dev/null 2>&1
 
 rm /root/.ngrok2/ngrok.yml
 
-authtoken=$(echo "authtoken: $KEY" > /root/.ngrok2/ngrok.yml)
-region=$(echo "region: sa" >> /root/.ngrok2/ngrok.yml)
-tunnels=$(echo "tunnels:" >> /root/.ngrok2/ngrok.yml)
-http=$(echo "  http:" >> /root/.ngrok2/ngrok.yml)
-addr80=$(echo "    addr: 80" >> /root/.ngrok2/ngrok.yml)
-protoHttp=$(echo "    proto: http" >> /root/.ngrok2/ngrok.yml)
-tcp=$(echo "  tcp:" >> /root/.ngrok2/ngrok.yml)
-addr443=$(echo "    addr: 443" >> /root/.ngrok2/ngrok.yml)
-protoTcp=$(echo "    proto: tcp" >> /root/.ngrok2/ngrok.yml)
-
-$authtoken
-$region
-$tunnels
-$http
-$addr80
-$protoHttp
-$tcp
-$addr443
-$protoTcp
-
-echo "ngrok start --all" >> autongrok
-chmod +x autongrok
-mv autongrok /usr/local/bin/autongrok
-
-touch trocarKey
-chmod +x trocarKey
-mv trocarKey /usr/local/bin/trocarKey
-
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/trocarKey" > $path/trocarKey
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/keys" >> $path/trocarKey
-echo "cat keys | shuf -n1 > /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 1 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 2 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 3 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 4 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 5 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 6 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 7 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 8 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "rm keys" >> $path/trocarKey
-echo "rm trocarKey" >> $path/trocarKey
-
-rm keys
-
-touch ngrok-desinstalar
-chmod +x ngrok-desinstalar
-mv ngrok-desinstalar $path/ngrok-desinstalar
-
-rmNgrok2=$(echo "rm -rf ./.ngrok*")
-rmAutongrok=$(echo "rm $path/autongrok")
-rmNgrok=$(echo "rm $path/ngrok")
-rmTrocarKey=$(echo "rm $path/trocarKey")
-rmNgrokDesinstalar=$(echo "rm $path/ngrok-desinstalar")
-
-echo $rmNgrok2 > $path/ngrok-desinstalar
-echo $rmAutongrok >> $path/ngrok-desinstalar
-echo $rmNgrok >> $path/ngrok-desinstalar
-echo $rmTrocarKey >> $path/ngrok-desinstalar
-echo $rmNgrokDesinstalar >> $path/ngrok-desinstalar
-
-if [ $hora -ge '00' ] && [ $hora -le '05' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA MADRUGADA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '06' ] && [ $hora -le '11' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha um BOM DIA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '12' ] && [ $hora -le '17' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA TARDE!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '18' ] && [ $hora -le '23' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA NOITE!"
-echo $linha
-echo
-fi
-
-echo $linha
-echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
-echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
-echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-echo $linha
-echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
-echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
-echo $linha
-sleep 1
-echo "Ngrok vai ser executado automaticamente em: 5"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 4"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 3"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 2"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 1"
-sleep 0.5
-
-xterm -hold -e 'autongrok' &
-
+config_default
+request_autongrok_trocarkey_desinstalar
+ngrok_instalado
+how_use_and_credits
 exit
 ;;
 
 *)
-
-clear
-echo
-echo -e "CARA, tens que escolher entre \033[01;31m1 e 2\033[01;00m, se digitar novamente errado o instalador vai ser fechado!"
-echo $linha
-echo -e "Para evitar problemas entre como \033[01;31mroot\033[01;00m para instalar!"
-echo $linha
-echo "Deseja instalar o ngrok para qual versao do Linux?"
-echo "  (1) x86"
-echo "  (2) x64"
-echo $linha
-echo
-read -s escolhaBits
-case $escolhaBits in
-
-1)
-touch ngrok-stable-linux-386.zip
-rm ngrok-stable-linux-386.zip
-wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
-unzip -qq ngrok-stable-linux-386.zip
-rm ngrok-stable-linux-386.zip
-mv ngrok $path/ngrok
-
-echo $KEY1 > $PWD/keys
-echo $KEY2 >> $PWD/keys
-echo $KEY3 >> $PWD/keys
-echo $KEY4 >> $PWD/keys
-echo $KEY5 >> $PWD/keys
-echo $KEY6 >> $PWD/keys
-echo $KEY7 >> $PWD/keys
-echo $KEY8 >> $PWD/keys
-echo $KEY9 >> $PWD/keys
-echo $KEY10 >> $PWD/keys
-echo $KEY11 >> $PWD/keys
-echo $KEY12 >> $PWD/keys
-echo $KEY13 >> $PWD/keys
-echo $KEY14 >> $PWD/keys
-echo $KEY15 >> $PWD/keys
-echo $KEY16 >> $PWD/keys
-echo $KEY17 >> $PWD/keys
-echo $KEY18 >> $PWD/keys
-echo $KEY19 >> $PWD/keys
-echo $KEY20 >> $PWD/keys
-echo $KEY21 >> $PWD/keys
-echo $KEY22 >> $PWD/keys
-echo $KEY23 >> $PWD/keys
-echo $KEY24 >> $PWD/keys
-echo $KEY25 >> $PWD/keys
-echo $KEY26 >> $PWD/keys
-echo $KEY27 >> $PWD/keys
-
-KEY=$(cat $PWD/keys | shuf -n1)
-
-ngrok authtoken "$KEY"
-
-rm /root/.ngrok2/ngrok.yml
-
-authtoken=$(echo "authtoken: $KEY" > /root/.ngrok2/ngrok.yml)
-region=$(echo "region: sa" >> /root/.ngrok2/ngrok.yml)
-tunnels=$(echo "tunnels:" >> /root/.ngrok2/ngrok.yml)
-http=$(echo "  http:" >> /root/.ngrok2/ngrok.yml)
-addr80=$(echo "    addr: 80" >> /root/.ngrok2/ngrok.yml)
-protoHttp=$(echo "    proto: http" >> /root/.ngrok2/ngrok.yml)
-tcp=$(echo "  tcp:" >> /root/.ngrok2/ngrok.yml)
-addr443=$(echo "    addr: 443" >> /root/.ngrok2/ngrok.yml)
-protoTcp=$(echo "    proto: tcp" >> /root/.ngrok2/ngrok.yml)
-
-$authtoken
-$region
-$tunnels
-$http
-$addr80
-$protoHttp
-$tcp
-$addr443
-$protoTcp
-
-echo "ngrok start --all" >> autongrok
-chmod +x autongrok
-mv autongrok /usr/local/bin/autongrok
-
-touch trocarKey
-chmod +x trocarKey
-mv trocarKey /usr/local/bin/trocarKey
-
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/trocarKey" > $path/trocarKey
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/keys" >> $path/trocarKey
-echo "cat keys | shuf -n1 > /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 1 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 2 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 3 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 4 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 5 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 6 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 7 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 8 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "rm keys" >> $path/trocarKey
-echo "rm trocarKey" >> $path/trocarKey
-
-rm keys
-
-touch ngrok-desinstalar
-chmod +x ngrok-desinstalar
-mv ngrok-desinstalar $path/ngrok-desinstalar
-
-rmNgrok2=$(echo "rm -rf ./.ngrok*")
-rmAutongrok=$(echo "rm $path/autongrok")
-rmNgrok=$(echo "rm $path/ngrok")
-rmTrocarKey=$(echo "rm $path/trocarKey")
-rmNgrokDesinstalar=$(echo "rm $path/ngrok-desinstalar")
-
-echo $rmNgrok2 > $path/ngrok-desinstalar
-echo $rmAutongrok >> $path/ngrok-desinstalar
-echo $rmNgrok >> $path/ngrok-desinstalar
-echo $rmTrocarKey >> $path/ngrok-desinstalar
-echo $rmNgrokDesinstalar >> $path/ngrok-desinstalar
-
-if [ $hora -ge '00' ] && [ $hora -le '05' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA MADRUGADA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '06' ] && [ $hora -le '11' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha um BOM DIA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '12' ] && [ $hora -le '17' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA TARDE!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '18' ] && [ $hora -le '23' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA NOITE!"
-echo $linha
-echo
-fi
-
-echo $linha
-echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
-echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
-echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-echo $linha
-echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
-echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
-echo $linha
-sleep 1
-echo "Ngrok vai ser executado automaticamente em: 5"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 4"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 3"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 2"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 1"
-sleep 0.5
-
-xterm -hold -e 'autongrok' &
-
-exit
-;;
-
-2)
-touch ngrok-stable-linux-amd64.zip
-rm ngrok-stable-linux-amd64.zip
-wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-unzip -qq ngrok-stable-linux-amd64.zip
-rm ngrok-stable-linux-amd64.zip
-mv ngrok $path/ngrok
-
-echo $KEY1 > $PWD/keys
-echo $KEY2 >> $PWD/keys
-echo $KEY3 >> $PWD/keys
-echo $KEY4 >> $PWD/keys
-echo $KEY5 >> $PWD/keys
-echo $KEY6 >> $PWD/keys
-echo $KEY7 >> $PWD/keys
-echo $KEY8 >> $PWD/keys
-echo $KEY9 >> $PWD/keys
-echo $KEY10 >> $PWD/keys
-echo $KEY11 >> $PWD/keys
-echo $KEY12 >> $PWD/keys
-echo $KEY13 >> $PWD/keys
-echo $KEY14 >> $PWD/keys
-echo $KEY15 >> $PWD/keys
-echo $KEY16 >> $PWD/keys
-echo $KEY17 >> $PWD/keys
-echo $KEY18 >> $PWD/keys
-echo $KEY19 >> $PWD/keys
-echo $KEY20 >> $PWD/keys
-echo $KEY21 >> $PWD/keys
-echo $KEY22 >> $PWD/keys
-echo $KEY23 >> $PWD/keys
-echo $KEY24 >> $PWD/keys
-echo $KEY25 >> $PWD/keys
-echo $KEY26 >> $PWD/keys
-echo $KEY27 >> $PWD/keys
-
-KEY=$(cat $PWD/keys | shuf -n1)
-
-ngrok authtoken "$KEY"
-
-rm /root/.ngrok2/ngrok.yml
-
-authtoken=$(echo "authtoken: $KEY" > /root/.ngrok2/ngrok.yml)
-region=$(echo "region: sa" >> /root/.ngrok2/ngrok.yml)
-tunnels=$(echo "tunnels:" >> /root/.ngrok2/ngrok.yml)
-http=$(echo "  http:" >> /root/.ngrok2/ngrok.yml)
-addr80=$(echo "    addr: 80" >> /root/.ngrok2/ngrok.yml)
-protoHttp=$(echo "    proto: http" >> /root/.ngrok2/ngrok.yml)
-tcp=$(echo "  tcp:" >> /root/.ngrok2/ngrok.yml)
-addr443=$(echo "    addr: 443" >> /root/.ngrok2/ngrok.yml)
-protoTcp=$(echo "    proto: tcp" >> /root/.ngrok2/ngrok.yml)
-
-$authtoken
-$region
-$tunnels
-$http
-$addr80
-$protoHttp
-$tcp
-$addr443
-$protoTcp
-
-clear
-
-echo "ngrok start --all" >> autongrok
-chmod +x autongrok
-mv autongrok /usr/local/bin/autongrok
-
-touch trocarKey
-chmod +x trocarKey
-mv trocarKey /usr/local/bin/trocarKey
-
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/trocarKey" > $path/trocarKey
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/keys" >> $path/trocarKey
-echo "cat keys | shuf -n1 > /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 1 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 2 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 3 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 4 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 5 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 6 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 7 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "head -n 8 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
-echo "rm keys" >> $path/trocarKey
-echo "rm trocarKey" >> $path/trocarKey
-
-rm keys
-
-touch ngrok-desinstalar
-chmod +x ngrok-desinstalar
-mv ngrok-desinstalar $path/ngrok-desinstalar
-
-rmNgrok2=$(echo "rm -rf ./.ngrok*")
-rmAutongrok=$(echo "rm $path/autongrok")
-rmNgrok=$(echo "rm $path/ngrok")
-rmTrocarKey=$(echo "rm $path/trocarKey")
-rmNgrokDesinstalar=$(echo "rm $path/ngrok-desinstalar")
-
-echo $rmNgrok2 > $path/ngrok-desinstalar
-echo $rmAutongrok >> $path/ngrok-desinstalar
-echo $rmNgrok >> $path/ngrok-desinstalar
-echo $rmTrocarKey >> $path/ngrok-desinstalar
-echo $rmNgrokDesinstalar >> $path/ngrok-desinstalar
-
-if [ $hora -ge '00' ] && [ $hora -le '05' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA MADRUGADA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '06' ] && [ $hora -le '11' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha um BOM DIA!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '12' ] && [ $hora -le '17' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA TARDE!"
-echo $linha
-echo
-fi
-
-if [ $hora -ge '18' ] && [ $hora -le '23' ]
-then
-echo
-echo $linha
-echo "NGROK INSTALADO, tenha uma BOA NOITE!"
-echo $linha
-echo
-fi
-
-echo $linha
-echo -e "Utilize '\033[01;31mautongrok\033[01;00m' no Terminal para abrir o Ngrok configurado."
-echo -e "Utilize '\033[01;31mtrocarKey\033[01;00m' para trocar de Key caso esteja com problema."
-echo -e "Utilize '\033[01;31mngrok-desinstalar\033[01;00m' para desinstalar o ngrok."
-echo $linha
-echo -e "Script desenvolvido por: \033[01;34mEduardo Buzzi\033[01;00m"
-echo -e "Mais Scripts em: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
-echo $linha
-sleep 1
-echo "Ngrok vai ser executado automaticamente em: 5"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 4"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 3"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 2"
-sleep 0.5
-echo "Ngrok vai ser executado automaticamente em: 1"
-sleep 0.5
-
-xterm -hold -e 'autongrok' &
-
-exit
-;;
-
-*)
-clear
-echo "Eu avisei que o Instalador seria fechado se errase, era apenas escolher entre 1 e 2! =C"
-exit
+principal
 ;;
 esac
-esac
+}
+principal
