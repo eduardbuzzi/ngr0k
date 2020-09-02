@@ -61,8 +61,8 @@ touch trocarKey
 chmod +x trocarKey
 mv trocarKey /usr/local/bin/trocarKey
 
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/trocarKey" > $path/trocarKey
-echo "wget -q https://raw.githubusercontent.com/eduardbuzzi/ngr0k/master/keys" >> $path/trocarKey
+echo "wget -q https://raw.githubusercontent.com/edubuzzi/ngr0k/master/trocarKey" > $path/trocarKey
+echo "wget -q https://raw.githubusercontent.com/edubuzzi/ngr0k/master/keys" >> $path/trocarKey
 echo "cat keys | shuf -n1 > /root/.ngrok2/ngrok.yml" >> $path/trocarKey
 echo "head -n 1 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
 echo "head -n 2 trocarKey | tail -n 1 >> /root/.ngrok2/ngrok.yml" >> $path/trocarKey
@@ -120,7 +120,7 @@ echo -e "Use '\033[01;31mngrok-desinstalar\033[01;00m' to uninstall ngrok."
 echo $line
 echo
 echo -e "Script developed by: \033[01;34mEduardo Buzzi\033[01;00m"
-echo -e "More Scripts in: \033[01;34mhttps://github.com/eduardbuzzi\033[01;00m"
+echo -e "More Scripts in: \033[01;34mhttps://github.com/edubuzzi\033[01;00m"
 echo
 }
 
